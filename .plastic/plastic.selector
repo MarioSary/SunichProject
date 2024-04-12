@@ -1,0 +1,4 @@
+repository "Sunich@MarionOdyssey@cloud"
+  path "/"
+    br "/main"
+    co "/main"
