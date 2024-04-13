@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,14 +11,35 @@ public class DragAndDrop : MonoBehaviour
     private Vector3 offset;
     private Transform toDrag;
     
-    
-    void Update()
+    //BACK TO POS IN WRONG SITUATIONS
+    private bool isLocked;
+    [SerializeField] private GameObject[] product;
+    [SerializeField] private GameObject[] productRightPos;
+    [SerializeField] private Vector3[] productInFirstPos;
+    [SerializeField] private float dropDist;
+
+    private void Start()
+    {
+        for (int i = 0; i < product.Length; i++)
+        {
+            productInFirstPos[i] = product[i].transform.position;
+        }
+        
+    }
+
+    public void Update()
     {
         Vector3 v3;
 
         if (Input.touchCount != 1)
         {
             dragging = false;
+
+            for (int i = 0; i < product.Length; i++)
+            {
+                product[i].transform.position = productInFirstPos[i];
+            }
+            
             return;
         }
 
@@ -52,7 +74,42 @@ public class DragAndDrop : MonoBehaviour
 
         if (dragging && (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled))
         {
-            dragging = false;
+            for (int i = 0; i < Mathf.Min(product.Length, productRightPos.Length); ++i)
+            {
+                float Distance = Vector3.Distance(product[i].transform.position, productRightPos[i].transform.position);
+                
+                if (Distance < dist)
+                {
+                    isLocked = true;
+                    product[i].transform.position = productRightPos[i].transform.position;
+                }
+                else
+                {
+                    product[i].transform.position = productInFirstPos[i];
+                }
+                
+                dragging = false;
+            }
+            
         }
     }
+    
+
+    /*public void DropObjects()
+    {
+        
+            float Distance = Vector3.Distance(product.transform.position, productRightPos.transform.position);
+
+            if (Distance < dist)
+            {
+                isLocked = true;
+                product.transform.position = productRightPos.transform.position;
+            }
+            else
+            {
+                product.transform.position = productInFirstPos;
+            } 
+        
+        
+    }*/
 }
