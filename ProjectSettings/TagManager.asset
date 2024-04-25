@@ -8,6 +8,15 @@ TagManager:
   - RedArea
   - YellowArea
   - GreenArea
+  - 1Pos
+  - 2Pos
+  - 3Pos
+  - 4.8Pos
+  - 6Pos
+  - 7Pos
+  - 9Pos
+  - 10Pos
+  - 11.12Pos
   layers:
   - Default
   - TransparentFX

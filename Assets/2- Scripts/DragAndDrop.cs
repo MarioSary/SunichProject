@@ -10,7 +10,12 @@ public class DragAndDrop : MonoBehaviour
     
     [SerializeField] private Vector3 productInFirstPos;
     private bool dragging = false;
- 
+
+    private void Start()
+    {
+        productInFirstPos = transform.position;
+    }
+
     public void Update()
     {
         if (Input.touchCount != 1)
@@ -56,12 +61,16 @@ public class DragAndDrop : MonoBehaviour
         RaycastHit hitInfo;
         if(Physics.Raycast(rayOrigin, rayDirection, out hitInfo))
         {
+            Debug.Log("Hit");
+            
             if(hitInfo.transform.tag == destinationTag)
             {
+                Debug.Log("HitSnap");
                 transform.position = hitInfo.transform.position;
                 
                 //to lock on the correct pos
                 transform.GetComponent<Collider>().enabled = false;
+                //Destroy(hitInfo.transform.gameObject);
             }
             else
             {

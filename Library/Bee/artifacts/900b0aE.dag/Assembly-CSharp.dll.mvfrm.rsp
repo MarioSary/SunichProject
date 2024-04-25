@@ -1,3 +1,4 @@
+Library\Bee\artifacts\mvdfrm\Unity.2D.Sprite.Editor.ref.dll_7C063CDBF8483C05.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.EditorCoroutines.Editor.ref.dll_44B23014301201CE.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Performance.Profile-Analyzer.Editor.ref.dll_6D5A44DF5A5FB85E.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.PlasticSCM.Editor.ref.dll_61765147EED78A29.mvfrm
@@ -21,6 +22,8 @@ Library\Bee\artifacts\mvdfrm\Unity.VisualScripting.State.ref.dll_695E51A145AA52F
 Library\Bee\artifacts\mvdfrm\Unity.VisualStudio.Editor.ref.dll_CFFC789CDF177EE0.mvfrm
 Library\Bee\artifacts\mvdfrm\UnityEditor.UI.ref.dll_6A0DDEC5ED23C452.mvfrm
 Library\Bee\artifacts\mvdfrm\UnityEngine.UI.ref.dll_2673B520F345ECBD.mvfrm
+Library\Bee\artifacts\mvdfrm\UnityFigmaBridgeEditor.ref.dll_7A570E9BB61A48AB.mvfrm
+Library\Bee\artifacts\mvdfrm\UnityFigmaBridgeRuntime.ref.dll_3DD2468878341550.mvfrm
 Library\Bee\artifacts\mvdfrm\UnityEditor.CoreModule.dll_29A10761F73D91EF.mvfrm
 Library\Bee\artifacts\mvdfrm\UnityEditor.DeviceSimulatorModule.dll_EE9AFE58E5814802.mvfrm
 Library\Bee\artifacts\mvdfrm\UnityEditor.DiagnosticsModule.dll_7761A951B964A9D0.mvfrm
